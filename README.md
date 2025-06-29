@@ -9,6 +9,8 @@ You can use it through usb by connecting D+ (the CLOCK pin) to an interrupt
 pin and D- (the DATA pin) to any digital input pin.
 (you also have to supply the PS2Keyboard ofcourse)
 
+**READ MORE ON THE WIKI**: [wiki =>](https://github.com/TheBlackSwitch/PS2Keyboard/wiki)
+
 # LICENSE
 
  This software by theblackswitch is licensed under CC-BY-NC
