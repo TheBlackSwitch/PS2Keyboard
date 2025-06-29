@@ -3,7 +3,7 @@
 
 ---------------------------DESCRIPTION--------------------------------------
 
-A simple library used to read a PS2Keyboard using the PS/2 protocol
+A simple arduino library used to read a PS2Keyboard using the PS/2 protocol
 Many modern PS2Keyboards still support the PS/2 protocol!
 You can use it through usb by connecting D+ (the CLOCK pin) to an interrupt
 pin and D- (the DATA pin) to any digital input pin.
