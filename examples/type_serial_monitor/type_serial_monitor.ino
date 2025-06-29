@@ -58,8 +58,8 @@ void setup() {
 void loop() {
   if(keyboard.has_data()) {
     //If we have recieved data, read it
-    key_pressed key = keyboard.read_data();
-    /* key_pressed is a custom data type consisting of 3 variables:
+    key_event key = keyboard.read_data();
+    /* key_event is a custom data structure consisting of 3 variables:
        - key.scancode => The unique code of this key pressed
        - key.is_extended => Whenever this key is part of the extended key codes (extended key codes can overlap with non extended ones!!)
        - key.is_pressed => True whenever the key is pressed. When it is released, it is false.

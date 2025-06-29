@@ -159,7 +159,7 @@ pin and D- (the DATA pin) to any digital input pin.
 #endif
 
 
-struct key_pressed {
+struct key_event {
   int scancode; //The unique code of this key pressed
   bool is_extended; //Whenever this key is part of the extended key codes (extended key codes can overlap with non extended ones!!)
   bool is_pressed; //True whenever the key is pressed. When it is released, it is false.
@@ -177,9 +177,9 @@ class PS2Keyboard {
     public:
         void begin(uint8_t clock_pin /* should be interrupt */, uint8_t data_pin);
         bool has_data();
-        key_pressed read_data();
-        char key_to_char_azerty(key_pressed data, bool shift);
-        char key_to_char_querty(key_pressed data, bool shift);
+        key_event read_data();
+        char key_to_char_azerty(key_event data, bool shift);
+        char key_to_char_querty(key_event data, bool shift);
 };
 
 

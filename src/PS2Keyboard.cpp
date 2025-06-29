@@ -255,9 +255,9 @@ bool PS2Keyboard::has_data()
     return false; // No valid data found
 }
 
-key_pressed PS2Keyboard::read_data()
+key_event PS2Keyboard::read_data()
 {
-    key_pressed return_data;
+    key_event return_data;
     // read the first char received (that means it's at the last index of the buffer)
     for (int i = 7; i >= 0; i--)
     {
@@ -317,7 +317,7 @@ key_pressed PS2Keyboard::read_data()
     }
 }
 
-char PS2Keyboard::key_to_char_azerty(key_pressed data, bool shift)
+char PS2Keyboard::key_to_char_azerty(key_event data, bool shift)
 {
     if (!data.is_extended)
     {
@@ -456,7 +456,7 @@ char PS2Keyboard::key_to_char_azerty(key_pressed data, bool shift)
     return '\0';
 }
 
-char PS2Keyboard::key_to_char_querty(key_pressed data, bool shift)
+char PS2Keyboard::key_to_char_querty(key_event data, bool shift)
 {
     if (!data.is_extended)
     {
